@@ -32,15 +32,15 @@ body::before {
 }
 
 .page-shell {
-  width: min(100% - 40px, 680px);
+  width: min(100% - 40px, 720px);
   margin-inline: auto;
-  padding: 72px 0 40px;
+  padding: 64px 0 40px;
 }
 
 .profile {
   position: relative;
   --cover-offset: 72px;
-  padding: 108px 20px 0;
+  padding: 96px 20px 0;
   text-align: center;
 }
 
@@ -108,22 +108,29 @@ h1 {
 .nickname { margin: 10px 0 0; color: var(--muted); font-weight: 650; }
 
 .bio {
-  max-width: 460px;
-  margin: 18px auto 0;
+  max-width: 430px;
+  margin: 14px auto 0;
   color: #334155;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.12rem;
-  line-height: 1.65;
+  font-size: 1.04rem;
+  line-height: 1.5;
 }
 
-.links { margin-top: 52px; }
+.links {
+  margin-top: 34px;
+  padding: 24px 22px 22px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(15, 76, 129, 0.1);
+  border-radius: 26px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.07);
+}
 
 .section-heading {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 14px;
-  margin-bottom: 17px;
+  margin-bottom: 19px;
 }
 
 .section-heading span { height: 1px; background: var(--line); }
@@ -131,17 +138,17 @@ h1 {
 h2 {
   margin: 0;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.76rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 .book-card {
   display: grid;
-  grid-template-columns: 126px 1fr;
+  grid-template-columns: 132px 1fr;
   gap: 26px;
-  min-height: 194px;
-  margin-top: 14px;
+  min-height: 202px;
+  margin-top: 12px;
   padding: 18px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.9);
@@ -159,8 +166,8 @@ h2 {
 
 .book-cover {
   display: block;
-  width: 126px;
-  height: 178px;
+  width: 132px;
+  height: 186px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
@@ -185,7 +192,7 @@ h2 {
   margin: 6px 0 10px;
   color: var(--navy);
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.72rem;
+  font-size: 1.82rem;
   line-height: 1.05;
   overflow-wrap: anywhere;
 }
@@ -227,7 +234,7 @@ h2 {
   grid-template-columns: 20px 1fr auto;
   align-items: center;
   gap: 9px;
-  min-height: 42px;
+  min-height: 46px;
   padding: 9px 10px;
   color: white;
   font-size: 0.72rem;
@@ -262,7 +269,7 @@ h2 {
   grid-template-columns: 48px 1fr 26px;
   align-items: center;
   gap: 15px;
-  min-height: 86px;
+  min-height: 92px;
   margin-top: 12px;
   padding: 16px 18px;
   color: var(--ink);
@@ -304,18 +311,54 @@ h2 {
 .arrow { justify-self: end; font-size: 1.15rem; transition: transform 180ms ease; }
 .link-card:hover .arrow { transform: translate(2px, -2px); }
 
-footer { margin-top: 44px; text-align: center; }
-footer p { margin: 0 0 15px; color: var(--muted); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
-.socials { display: flex; flex-wrap: nowrap; justify-content: center; gap: 11px; }
-.socials a { display: grid; flex: 0 0 48px; width: 48px; height: 48px; place-items: center; padding: 0; color: white; text-decoration: none; background: linear-gradient(145deg, #38bdf8, var(--blue) 54%, var(--navy)); border: 1px solid rgba(255, 255, 255, 0.45); border-radius: 50%; box-shadow: 0 9px 22px rgba(8, 47, 73, 0.16); transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease; }
-.socials i { font-size: 1.3rem; line-height: 1; }
-.socials a:hover, .socials a:focus-visible { color: white; filter: brightness(1.05) saturate(1.05); box-shadow: 0 13px 26px rgba(8, 47, 73, 0.24); outline: none; }
-.socials a:hover { transform: translateY(-2px); }
-footer > small { display: block; margin-top: 28px; color: #94a3b8; font-size: 0.72rem; }
+.social-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 2px 12px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.social-heading::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+.socials {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.socials a {
+  display: flex;
+  min-width: 0;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 8px;
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 750;
+  text-decoration: none;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition: transform 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.socials i { flex: 0 0 auto; font-size: 1rem; line-height: 1; }
+.socials span { overflow: hidden; text-overflow: ellipsis; }
+.socials a:hover, .socials a:focus-visible { color: white; background: var(--blue); border-color: var(--blue); box-shadow: 0 8px 18px rgba(8, 47, 73, 0.18); outline: none; transform: translateY(-2px); }
+
+footer { margin-top: 24px; text-align: center; }
+footer > small { display: block; color: #94a3b8; font-size: 0.72rem; }
 
 .about {
   position: relative;
-  margin-top: 48px;
+  margin-top: 38px;
   padding: 42px clamp(24px, 7vw, 48px);
   overflow: hidden;
   text-align: left;
@@ -374,7 +417,7 @@ footer > small { display: block; margin-top: 28px; color: #94a3b8; font-size: 0.
   .profile::before { height: 205px; }
   .avatar-frame { width: 124px; height: 124px; }
   .bio { font-size: 1.03rem; line-height: 1.58; }
-  .links { margin-top: 38px; }
+  .links { margin-top: 28px; padding: 18px 12px 14px; border-radius: 20px; }
   .link-card { grid-template-columns: 44px 1fr 20px; gap: 12px; min-height: 80px; padding: 14px; border-radius: 15px; }
   .card-icon { width: 44px; height: 44px; border-radius: 12px; }
   .book-card { grid-template-columns: 88px 1fr; gap: 8px 14px; min-height: 148px; padding: 12px; border-radius: 16px; }
@@ -388,6 +431,8 @@ footer > small { display: block; margin-top: 28px; color: #94a3b8; font-size: 0.
   .book-card-ezequiel .book-actions { max-width: none; }
   .book-card-machina .book-actions { grid-template-columns: 1fr; }
   .book-actions a { min-height: 44px; padding: 9px 12px; font-size: 0.76rem; }
+  .socials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .socials a:last-child { grid-column: 1 / -1; }
   .about { margin-top: 40px; padding: 34px 24px; border-radius: 18px; }
   .about-copy p { font-size: 0.96rem; line-height: 1.68; }
   .about-copy p:first-child { font-size: 1.03rem; }
@@ -415,7 +460,6 @@ footer > small { display: block; margin-top: 28px; color: #94a3b8; font-size: 0.
   .card-copy strong { font-size: 0.9rem; }
   .card-copy small { font-size: 0.72rem; }
   .socials { gap: 7px; }
-  .socials a { flex-basis: 42px; width: 42px; height: 42px; }
   .about { padding: 30px 20px; }
 }
 
