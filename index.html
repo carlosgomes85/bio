@@ -2,7 +2,7 @@
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description" content="Livros, sites e redes sociais de C. E. Gomes, escritor de ficção cristã.">
     <meta name="theme-color" content="#111b2e">
     <title>C. E. Gomes — Escritor</title>
@@ -10,93 +10,280 @@
     <link rel="apple-touch-icon" href="assets/cadu-gomes.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main class="page-shell">
-      <section class="hero" aria-labelledby="profile-title">
+      <!-- HERO SECTION -->
+      <section class="hero" id="inicio" aria-labelledby="profile-title">
+        <div class="hero-bg-overlay" aria-hidden="true"></div>
+
+        <div class="hero-portrait-col">
+          <div class="portrait-wrap">
+            <div class="portrait-glow" aria-hidden="true"></div>
+            <img src="assets/cadu-gomes.png" alt="Retrato de Cadu Gomes" class="portrait" width="480" height="480">
+          </div>
+        </div>
+
         <div class="hero-copy">
-          <p class="eyebrow">Escritor de ficção cristã</p>
-          <h1 id="profile-title">C. E. <span>Gomes</span></h1>
-          <p class="role">Cadu Gomes</p>
-        </div>
-        <div class="portrait-wrap">
-          <div class="portrait-glow"></div>
-          <img src="assets/cadu-gomes.png" alt="Retrato de Cadu Gomes" class="portrait" width="480" height="480">
-        </div>
-        <div class="hero-message">
-          <p class="intro">Histórias onde fé, ciência e esperança se encontram em mundos extraordinários.</p>
-          <div class="hero-note"><i class="bi bi-book-half" aria-hidden="true"></i><span>Conheça meus livros e entre em novas histórias.</span></div>
+          <div class="eyebrow-badge">
+            <i class="bi bi-feather" aria-hidden="true"></i>
+            <span>Escritor de ficção cristã</span>
+          </div>
+          <h1 id="profile-title">C. E. <span class="highlight">Gomes</span></h1>
+          <p class="role">Cadu Gomes <span class="role-separator">·</span> <span class="role-desc">Autor & Mestre em Computação</span></p>
+
+          <blockquote class="intro">
+            “Histórias onde fé, ciência e esperança se encontram em mundos extraordinários.”
+          </blockquote>
+
+          <div class="hero-note">
+            <i class="bi bi-book-half" aria-hidden="true"></i>
+            <span>Conheça meus livros e entre em novas histórias.</span>
+          </div>
+
+          <!-- Quick Navigation Bar -->
+          <nav class="quick-nav" aria-label="Navegação rápida">
+            <a href="#livros" class="quick-nav-pill">
+              <i class="bi bi-book" aria-hidden="true"></i>
+              <span>Obras</span>
+            </a>
+            <a href="#redes" class="quick-nav-pill">
+              <i class="bi bi-share" aria-hidden="true"></i>
+              <span>Redes</span>
+            </a>
+            <a href="#sobre" class="quick-nav-pill">
+              <i class="bi bi-person" aria-hidden="true"></i>
+              <span>Sobre mim</span>
+            </a>
+          </nav>
         </div>
       </section>
 
-      <section class="links-panel" aria-labelledby="books-title">
-        <div class="section-intro">
-          <div><p class="eyebrow">Obras publicadas</p><h2 id="books-title">Escolha sua próxima leitura</h2></div>
-          <span class="section-count">02 livros</span>
-        </div>
+      <!-- LIVROS / OBRAS PUBLICADAS -->
+      <section class="links-panel" id="livros" aria-labelledby="books-title">
+        <header class="section-intro">
+          <div class="section-intro-text">
+            <div class="eyebrow"><i class="bi bi-stars" aria-hidden="true"></i> Obras publicadas</div>
+            <h2 id="books-title">Escolha sua próxima leitura</h2>
+            <p class="section-subtitle">Romances que unem imaginação, reflexão profunda e esperança.</p>
+          </div>
+          <span class="section-count"><i class="bi bi-collection" aria-hidden="true"></i> 02 Livros</span>
+        </header>
 
         <div class="book-grid">
-          <article class="book-card book-card-ezequiel">
-            <div class="cover-wrap"><img class="book-cover" src="assets/capa_ezequiel.jpg" alt="Capa de Ezequiel e o Mundo de Ossos Vivos" loading="lazy"></div>
+          <!-- LIVRO 1: EZEQUIEL -->
+          <article class="book-card book-card-ezequiel" aria-labelledby="title-ezequiel">
+            <div class="card-ambient" aria-hidden="true"></div>
+
+            <div class="cover-column">
+              <div class="cover-stage">
+                <div class="book-3d">
+                  <img class="book-cover" src="assets/capa_ezequiel.jpg" alt="Capa do livro Ezequiel e o Mundo de Ossos Vivos" width="1024" height="1536" loading="lazy">
+                  <div class="book-spine" aria-hidden="true"></div>
+                  <div class="book-sheen" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+
             <div class="book-info">
-              <span class="book-label">Romance · Distopia</span>
-              <h3>Ezequiel e o Mundo de Ossos Vivos</h3>
+              <div class="book-meta-top">
+                <span class="book-label">Romance · Distopia</span>
+                <span class="kindle-badge" title="Disponível no catálogo Kindle+">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i> Disponível no Kindle+
+                </span>
+              </div>
+
+              <h3 id="title-ezequiel" class="book-title">Ezequiel e o Mundo de Ossos Vivos</h3>
               <p class="book-description">Uma história de amor, sobrevivência e esperança em meio ao caos.</p>
-              <span class="kindle-mais"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Disponível no Kindle+</span>
-              <div class="book-actions">
-                <a class="primary-action" href="https://a.co/d/0dIUBMt1" target="_blank" rel="noopener noreferrer"><i class="bi bi-amazon" aria-hidden="true"></i><span>Ler na Amazon</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-                <a class="secondary-action" href="https://carlosgomes85.github.io/ezequiel" target="_blank" rel="noopener noreferrer"><i class="bi bi-globe2" aria-hidden="true"></i><span>Visitar site do livro</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+
+              <!-- Links de Ação em Destaque -->
+              <div class="book-actions-group">
+                <span class="actions-header-label">Onde ler e adquirir:</span>
+
+                <!-- Link Principal Amazon -->
+                <a class="book-cta cta-amazon" href="https://a.co/d/0dIUBMt1" target="_blank" rel="noopener noreferrer">
+                  <span class="cta-icon-box"><i class="bi bi-amazon" aria-hidden="true"></i></span>
+                  <span class="cta-content">
+                    <span class="cta-title">Ler na Amazon</span>
+                    <span class="cta-meta">E-book Kindle & Edição Física</span>
+                  </span>
+                  <i class="bi bi-arrow-up-right cta-arrow" aria-hidden="true"></i>
+                </a>
+
+                <!-- Link Site do Livro -->
+                <a class="book-cta cta-website" href="https://carlosgomes85.github.io/ezequiel" target="_blank" rel="noopener noreferrer">
+                  <span class="cta-icon-box"><i class="bi bi-globe2" aria-hidden="true"></i></span>
+                  <span class="cta-content">
+                    <span class="cta-title">Visitar site do livro</span>
+                    <span class="cta-meta">Universo, personagens e extras</span>
+                  </span>
+                  <i class="bi bi-arrow-up-right cta-arrow" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </article>
 
-          <article class="book-card book-card-machina">
-            <div class="cover-wrap"><img class="book-cover" src="assets/capa_primavera.jpg" alt="Capa de Primavera Artificial" loading="lazy"></div>
+          <!-- LIVRO 2: PRIMAVERA ARTIFICIAL -->
+          <article class="book-card book-card-machina" aria-labelledby="title-primavera">
+            <div class="card-ambient" aria-hidden="true"></div>
+
+            <div class="cover-column">
+              <div class="cover-stage">
+                <div class="book-3d">
+                  <img class="book-cover" src="assets/capa_primavera.jpg" alt="Capa do livro Primavera Artificial — Cânticos de Machina" width="923" height="1280" loading="lazy">
+                  <div class="book-spine" aria-hidden="true"></div>
+                  <div class="book-sheen" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+
             <div class="book-info">
-              <span class="book-label">Cânticos de Machina · Livro 1</span>
-              <h3>Primavera Artificial</h3>
+              <div class="book-meta-top">
+                <span class="book-label label-machina">Cânticos de Machina · Livro 1</span>
+                <span class="kindle-badge" title="Disponível no catálogo Kindle+">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i> Disponível no Kindle+
+                </span>
+              </div>
+
+              <h3 id="title-primavera" class="book-title">Primavera Artificial</h3>
               <p class="book-description">Uma fábula sobre tecnologia, poder e a busca por um mundo melhor.</p>
-              <span class="kindle-mais"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Disponível no Kindle+</span>
-              <div class="book-actions">
-                <a class="primary-action" href="https://a.co/d/e3Revsg" target="_blank" rel="noopener noreferrer"><i class="bi bi-tablet" aria-hidden="true"></i><span>E-book</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-                <a class="secondary-action" href="https://a.co/d/eiJm9XL" target="_blank" rel="noopener noreferrer"><i class="bi bi-book" aria-hidden="true"></i><span>Livro impresso</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-                <a class="secondary-action" href="https://canticosdemachina.com.br/" target="_blank" rel="noopener noreferrer"><i class="bi bi-globe2" aria-hidden="true"></i><span>Site da saga</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+
+              <!-- Links de Ação em Destaque -->
+              <div class="book-actions-group">
+                <span class="actions-header-label">Onde ler e adquirir:</span>
+
+                <!-- Formatos de Compra na Amazon -->
+                <div class="format-stack">
+                  <!-- E-book Amazon -->
+                  <a class="book-cta cta-amazon" href="https://a.co/d/e3Revsg" target="_blank" rel="noopener noreferrer">
+                    <span class="cta-icon-box"><i class="bi bi-tablet" aria-hidden="true"></i></span>
+                    <span class="cta-content">
+                      <span class="cta-title">E-book Kindle</span>
+                      <span class="cta-meta">Edição digital na Amazon</span>
+                    </span>
+                    <i class="bi bi-arrow-up-right cta-arrow" aria-hidden="true"></i>
+                  </a>
+
+                  <!-- Livro Impresso Amazon -->
+                  <a class="book-cta cta-amazon-secondary" href="https://a.co/d/eiJm9XL" target="_blank" rel="noopener noreferrer">
+                    <span class="cta-icon-box"><i class="bi bi-book-half" aria-hidden="true"></i></span>
+                    <span class="cta-content">
+                      <span class="cta-title">Livro impresso</span>
+                      <span class="cta-meta">Edição física na Amazon</span>
+                    </span>
+                    <i class="bi bi-arrow-up-right cta-arrow" aria-hidden="true"></i>
+                  </a>
+                </div>
+
+                <!-- Link Site da Saga -->
+                <a class="book-cta cta-website" href="https://canticosdemachina.com.br/" target="_blank" rel="noopener noreferrer">
+                  <span class="cta-icon-box"><i class="bi bi-globe2" aria-hidden="true"></i></span>
+                  <span class="cta-content">
+                    <span class="cta-title">Site da saga Cânticos de Machina</span>
+                    <span class="cta-meta">canticosdemachina.com.br</span>
+                  </span>
+                  <i class="bi bi-arrow-up-right cta-arrow" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </article>
         </div>
 
+        <!-- ARTIGOS CIENTÍFICOS / GOOGLE SCHOLAR -->
         <a class="research-link" href="https://scholar.google.com.br/citations?user=11ORDMIAAAAJ" target="_blank" rel="noopener noreferrer">
-          <span class="research-icon"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i></span>
-          <span><strong>Artigos científicos publicados</strong><small>Confira minhas publicações no Google Acadêmico</small></span>
-          <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+          <span class="research-icon" aria-hidden="true">
+            <i class="bi bi-mortarboard-fill"></i>
+          </span>
+          <span class="research-content">
+            <span class="research-eyebrow">Pesquisa acadêmica</span>
+            <strong>Artigos científicos publicados</strong>
+            <small>Mestre em Engenharia de Sistemas e Computação — Confira publicações no Google Acadêmico</small>
+          </span>
+          <span class="research-cta-tag">Ver citações <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
         </a>
       </section>
 
-      <section class="social-section" aria-labelledby="social-title">
-        <div class="section-intro compact"><div><p class="eyebrow">Mais de C. E. Gomes</p><h2 id="social-title">Acompanhe meu trabalho</h2></div></div>
-        <nav class="socials" aria-label="Redes sociais">
-          <a href="https://instagram.com/carlosgomes85" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-          <a href="https://tiktok.com/cadugomes85" target="_blank" rel="noopener noreferrer"><i class="bi bi-tiktok" aria-hidden="true"></i><span>TikTok</span></a>
-          <a href="https://threads.net/carlosgomes85" target="_blank" rel="noopener noreferrer"><i class="bi bi-threads" aria-hidden="true"></i><span>Threads</span></a>
-          <a href="https://www.linkedin.com/in/carlosgomes85/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
-          <a href="https://www.amazon.com.br/stores/author/B0FL3FG3GG" target="_blank" rel="noopener noreferrer"><i class="bi bi-amazon" aria-hidden="true"></i><span>Amazon</span></a>
+      <!-- REDES SOCIAIS -->
+      <section class="social-section" id="redes" aria-labelledby="social-title">
+        <header class="section-intro compact">
+          <div>
+            <p class="eyebrow"><i class="bi bi-chat-dots" aria-hidden="true"></i> Conecte-se comigo</p>
+            <h2 id="social-title">Acompanhe meu trabalho</h2>
+          </div>
+          <span class="social-subtitle">Conteúdos, novidades e bastidores da escrita</span>
+        </header>
+
+        <nav class="socials" aria-label="Redes sociais e perfis de autor">
+          <a class="social-chip chip-instagram" href="https://instagram.com/carlosgomes85" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><i class="bi bi-instagram" aria-hidden="true"></i></span>
+            <span class="social-name">Instagram</span>
+            <span class="social-handle">@carlosgomes85</span>
+          </a>
+
+          <a class="social-chip chip-tiktok" href="https://tiktok.com/@cadugomes85" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><i class="bi bi-tiktok" aria-hidden="true"></i></span>
+            <span class="social-name">TikTok</span>
+            <span class="social-handle">@cadugomes85</span>
+          </a>
+
+          <a class="social-chip chip-threads" href="https://threads.net/@carlosgomes85" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><i class="bi bi-threads" aria-hidden="true"></i></span>
+            <span class="social-name">Threads</span>
+            <span class="social-handle">@carlosgomes85</span>
+          </a>
+
+          <a class="social-chip chip-linkedin" href="https://www.linkedin.com/in/carlosgomes85/" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><i class="bi bi-linkedin" aria-hidden="true"></i></span>
+            <span class="social-name">LinkedIn</span>
+            <span class="social-handle">carlosgomes85</span>
+          </a>
+
+          <a class="social-chip chip-amazon" href="https://www.amazon.com.br/stores/author/B0FL3FG3GG" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><i class="bi bi-amazon" aria-hidden="true"></i></span>
+            <span class="social-name">Página na Amazon</span>
+            <span class="social-handle">Perfil oficial de autor</span>
+          </a>
         </nav>
       </section>
 
-      <section class="about" aria-labelledby="about-title">
-        <p class="eyebrow">Sobre mim</p>
-        <h2 id="about-title">Entre tecnologia e imaginação</h2>
+      <!-- SOBRE MIM -->
+      <section class="about" id="sobre" aria-labelledby="about-title">
+        <div class="about-header">
+          <p class="eyebrow"><i class="bi bi-person-lines-fill" aria-hidden="true"></i> Sobre mim</p>
+          <h2 id="about-title">Entre tecnologia e imaginação</h2>
+          <div class="about-tags">
+            <span class="about-tag">✝️ Ficção Cristã</span>
+            <span class="about-tag">🚀 Ficção Científica</span>
+            <span class="about-tag">🕊️ Esperança & Fé</span>
+            <span class="about-tag">💻 Mestre em Computação</span>
+          </div>
+        </div>
+
         <div class="about-copy">
-          <p>Sou escritor brasileiro e mestre em Engenharia de Sistemas e Computação. Apaixonado por tecnologia, música e literatura, encontrei na escrita uma forma de unir imaginação, fé e algumas das inquietações do nosso tempo.</p>
+          <p class="lead-para">Sou escritor brasileiro e mestre em Engenharia de Sistemas e Computação. Apaixonado por tecnologia, música e literatura, encontrei na escrita uma forma de unir imaginação, fé e algumas das inquietações do nosso tempo.</p>
           <p>Carioca, cresci cercado pelo universo da tecnologia, mas foi na ficção que encontrei espaço para explorar outros mundos e, ao mesmo tempo, refletir sobre o nosso: as escolhas que fazemos, os limites da ciência, a natureza humana, a sociedade e o futuro que estamos construindo.</p>
           <p>Minhas histórias transitam por gêneros como ficção científica, fantasia, romance e distopia, misturando aventura, suspense, emoção e referências bíblicas. Minha fé cristã está presente como parte essencial do que escrevo, especialmente em temas como propósito, redenção, amor e esperança.</p>
         </div>
+
+        <div class="about-footer-card">
+          <div class="author-signature">
+            <span class="sig-name">Cadu Gomes</span>
+            <span class="sig-city">Rio de Janeiro, Brasil</span>
+          </div>
+          <a href="#livros" class="back-to-books-btn">
+            <i class="bi bi-arrow-up-circle-fill" aria-hidden="true"></i>
+            <span>Ver livros novamente</span>
+          </a>
+        </div>
       </section>
-      <footer><small>© 2026 C. E. Gomes</small></footer>
+
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <p><small>© 2026 C. E. Gomes. Todos os direitos reservados.</small></p>
+      </footer>
     </main>
   </body>
 </html>
